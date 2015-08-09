@@ -2,10 +2,10 @@
 
 namespace Summa\Types;
 /**
- * DeveloperType
+ * IEmployeeType
  *
  * @author Andres Mazza <andres.mazza@gmail.com>
  */
-interface IDeveloperType {
+interface IEmployeeType {
     public function skill();
 }

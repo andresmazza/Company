@@ -2,14 +2,14 @@
 
 namespace Summa\Types;
 
-use Summa\Types\IDeveloperType;
+use Summa\Types\IEmployeeType;
 
 /**
  * Description of DeveloperNet
  *
  * @author Andres Mazza <andres.mazza@gmail.com>
  */
-class DeveloperNet implements IDeveloperType {
+class DeveloperNet implements IEmployeeType {
 
     const lang = 'Net';
 

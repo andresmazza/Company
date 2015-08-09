@@ -35,8 +35,39 @@ $employee->setType(DeveloperType::skill('NET'));
 $company->addEmployee($employee);
 
 
+$employee = new Designer();
+$employee->setId(4);
+$employee->setName('NAME');
+$employee->setLastname('LASTNAME');
+$employee->setAge(34);
+$employee->setType(Types\DesignerType::skill('Web'));
 
-//print_r($company->listEmployees());
+$company->addEmployee($employee);
 
-//print_r($company->findById(10));
+
+$employee = new Designer();
+$employee->setId(5);
+$employee->setName('NAME');
+$employee->setLastname('LASTNAME');
+$employee->setAge(33);
+$employee->setType(Types\DesignerType::skill('Graphics'));
+
+$company->addEmployee($employee);
+
+
+$employee = new Designer();
+$employee->setId(6);
+$employee->setName('NAME');
+$employee->setLastname('LASTNAME');
+$employee->setAge(33);
+$employee->setType(Types\DesignerType::skill('Web'));
+
+$company->addEmployee($employee);
+
+
+
+
+$current = $company->findById(6);
+echo $current->getType()->skill();
+
 print_r($company->getEmployeesAvg());

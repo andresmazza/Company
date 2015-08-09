@@ -1,18 +1,20 @@
 <?php
 
 namespace Summa\Types;
+
 use Summa\Types\IEmployeeType;
+
 /**
- * Description of DeveloperPython
+ * DesignerGraphics
  *
  * @author Andres Mazza <andres.mazza@gmail.com>
  */
-class DeveloperPython implements IEmployeeType {
+class DesignerGraphics implements IEmployeeType {
 
-    const lang = 'Python';
+    const skill = 'Graphics';
 
     public function skill() {
-        return self::lang;
+        return self::skill;
     }
 
 }

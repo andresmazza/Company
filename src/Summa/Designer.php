@@ -3,11 +3,11 @@
 namespace Summa;
 
 /**
- * Description of Developer
+ * Description of Designer
  *
  * @author Andres Mazza <andres.mazza@gmail.com>
  */
-class Developer extends Employee {
+class Designer extends Employee {
 
     public $type;
 

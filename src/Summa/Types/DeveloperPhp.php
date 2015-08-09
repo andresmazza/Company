@@ -1,14 +1,14 @@
 <?php
 
 namespace Summa\Types;
-use Summa\Types\IDeveloperType;
+use Summa\Types\IEmployeeType;
 
 /**
  * Description of DeveloperPHP
  *
  * @author Andres Mazza <andres.mazza@gmail.com>
  */
-class DeveloperPhp implements IDeveloperType {
+class DeveloperPhp implements IEmployeeType {
 
     const lang = 'PHP';
 
