@@ -7,42 +7,32 @@ namespace Summa;
  *
  * @author Andres Mazza <andres.mazza@gmail.com>
  */
-class Company {
-
-    private $id;
-    private $name;
-    private $employees;
-
-    public function getId() {
-        return $this->id;
-    }
-
-    public function getName() {
-        return $this->name;
-    }
-
-    public function getEmployees() {
-        return $this->employees;
-    }
-
-    public function setId($id) {
-        $this->id = $id;
-    }
-
-    public function setName($name) {
-        $this->name = $name;
-    }
-
-    public function addEmployee(Employee $employees) {
-        $this->employees[] = $employees;
-    }
-
-    public function listEmployees() {
-        
-    }
+class Company extends CompanyBase {
 
     public function findById($id) {
-        
+        if ($this->countEmployees() > 0) {
+            foreach ($this->listEmployees() as $employee) {
+                if ($id == $employee->getId()) {
+                    return $employee;
+                }
+            }
+        }
+        throw new \Exception('Employee ID not found');
+    }
+
+    public function getEmployeesAvg() {
+        $ages = 0;
+        $count = 0;
+        if ($this->countEmployees() > 0) {
+            foreach ($this->listEmployees() as $employee) {
+                ++$count;
+                $ages = $ages + $employee->getAge();
+            }
+            $avg = $ages / $count;
+        } else {
+            $avg = 0;
+        }
+        return $avg;
     }
 
 }
