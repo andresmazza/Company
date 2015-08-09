@@ -1,0 +1,23 @@
+{
+    "name": "andresmazza/summa",
+    "description": "Company Employees relations",
+    "require-dev": {
+        "phpunit/phpunit": "^4.7"
+    },
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Andres Mazza",
+            "email": "andres.mazza@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-0": {
+                    "Summa": "src/"
+                }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit test"
+    }
+}
