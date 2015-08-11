@@ -11,10 +11,6 @@ class Developer extends Employee {
 
     public $type;
 
-    public function __construct() {
-        
-    }
-
     public function setType(Types\IEmployeeType $developerType) {
         $this->type = $developerType;
     }
